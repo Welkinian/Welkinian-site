@@ -1,0 +1,95 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{/*gives settings for how navigation works in the site*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 45px;/*gap between the different elements in the nav container*/
+    padding: 30px 20px;/*gap between the text and the edge(top) of the screen*/
+    font-family: Arial, Helvetica, sans-serif;/*sets the font family for nav specificly*/
+    font-size: 16px;/*sets the font size*/
+}
+nav a{/*this applies settings to every item in the nav container*/
+    color: #111111;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+/*Class Selectors. they work like a class declaration, anything that refrences them constructs a class with thier form*/
+
+/*REFERING TO THE HOMEPAGE*/
+.home {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 50px 100px 50px;/*top right bottom left*/
+}
+.titleWord {
+    font-size: 90px;
+    font-weight: normal;
+    margin: 0;
+}
+.nounLabel {
+font-size: 25px;
+font-style: italic;
+margin-left: 15px;
+}
+.pronunciation {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.definition {
+    font-size: 30px;
+    line-height: 1.4;
+    max-width: 750px;
+}
+.quote {
+    margin-top: 80px;
+    max-width: 850px;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/*REFERING TO THE ABOUT PAGE*/
+
+
+/*for itty bitty screens*/
+@media (max-width: 700px) {
+    nav{
+        gap: 18px;
+        font-size: 14px;
+    }
+
+    /*FOR HOME SCREEN*/
+    .home {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .titleWord {
+        font-size: 55px;
+    }
+
+    .definition {
+        font-size: 23px;
+    }
+
+    .quote {
+        font-size: 19px;
+    }
+}
