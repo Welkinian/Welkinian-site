@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            Welkinian
+        </title>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <nav class="topMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html" class="currentPageName">
+                About
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="portfolio.html">
+                Portfolio
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <main class="about">
+            
+
+        </main>
+        
+        <script>
+            const pronunciationButton = document.getElementById("pronunciationButton");
+            const pronunciationImage = document.getElementById("pronunciationImage");
+            const pronunciationAudio = document.getElementById("pronunciationAudio");
+            pronunciationButton.addEventListener("click", function(){
+                pronunciationAudio.currentTime = 0;
+                pronunciationAudio.play();
+                pronunciationImage.src = "assets/volumeFull.svg";
+            });
+            pronunciationAudio.addEventListener("ended", function () {
+                pronunciationImage.src = "assets/volumeEmpty.svg";
+            });
+        </script>
+
+        <script src="cloudScript.js"></script>
+
+    </body>
+
+</html>

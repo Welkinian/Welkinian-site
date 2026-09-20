@@ -4,7 +4,7 @@ html{
 
 body{
     margin: 0;
-    background-color: #ffffff;
+    background-color: #87CEEB;
     color: #111111;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -14,7 +14,7 @@ nav{/*gives settings for how navigation works in the site*/
     justify-content: center;
     flex-wrap: nowrap;
     gap: 45px;/*gap between the different elements in the nav container*/
-    padding: 30px 20px;/*gap between the text and the edge(top) of the screen*/
+    padding: 30px 20px;/* vertical horizontal gap between the text and the edge(top) of the screen*/
     font-family: Arial, Helvetica, sans-serif;/*sets the font family for nav specificly*/
     font-size: 16px;/*sets the font size*/
 }
@@ -27,30 +27,37 @@ nav a:hover{
 }
 /*Class Selectors. they work like a class declaration, anything that refrences them constructs a class with thier form*/
 
+.topMenu{
+    font-size: 30px;
+}
+.currentPageName{
+    font-weight: bold;
+}
+
 /*REFERING TO THE HOMEPAGE*/
 .home {
     min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: auto;
     padding: 0 50px 100px 50px;/*top right bottom left*/
+    transform: translateY(-10px)
 }
 .titleWord {
-    font-size: 90px;
+    font-size: 180px;
     font-weight: normal;
     margin: 0;
 }
 .nounLabel {
-font-size: 25px;
+font-size: 50px;
 font-style: italic;
 margin-left: 15px;
 }
-
 .pronunciation {
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 50px;
     margin-top: 0px;
     margin-bottom: 30px;
 }
@@ -61,27 +68,19 @@ margin-left: 15px;
     transform: translateY(4px) translateX(3px);
 }
 .pronunciationButton img{
-    height: 25px;
-    width: 25px;
+    height: 50px;
+    width: 50px;
 }
-
 .definition {
-    font-size: 30px;
+    font-size: 60px;
     line-height: 1.4;
-    max-width: 750px;
 }
 .quote {
     margin-top: 80px;
-    max-width: 850px;
-    font-size: 24px;
+    font-size: 48px;
     font-style: italic;
     line-height: 1.5;
 }
-
-/*REFERING TO THE ABOUT PAGE*/
-
-
-/*for itty bitty screens*/
 @media (max-width: 700px) {
     nav{
         gap: 18px;
@@ -105,4 +104,62 @@ margin-left: 15px;
     .quote {
         font-size: 19px;
     }
+}
+
+/*REFERING TO THE ABOUT PAGE*/
+
+
+/*REFERING TO THE PROJECTS PAGE*/
+
+
+/*REFERING TO THE PORTFOLIO PAGE*/
+
+
+/*REFERING TO THE CONTACT PAGE*/
+
+
+
+
+.airborne-drifter {
+    position: fixed;
+
+    left: -400px;
+
+    width: 600px;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation-name: drift, bob;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: 1, infinite;
+}
+
+
+/* Move across the screen */
+@keyframes drift {
+
+    from {
+        left: -600px;
+    }
+
+    to {
+        left: calc(100vw + 600px);
+    }
+
+}
+
+
+/* Bob gently up and down */
+@keyframes bob {
+
+    0%, 100% {
+        transform: translateY(calc(-1 * var(--bob-height)));
+    }
+
+    50% {
+        transform: translateY(var(--bob-height));;
+    }
+
 }
