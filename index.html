@@ -46,27 +46,53 @@
 
                 <h1 class="titleWord">
                     Welkinian
-                    <span class="nounLabel">
-                        Noun
-                    </span>
                 </h1>
 
                 <p class="pronunciation">
-                    /wɛlˈkɪniən/
+                    <button class="pronunciationButton" id="pronunciationButton" type="button" aria-label="Play pronunciation">
+                        <img id="pronunciationImage" src="assets/volumeEmpty.svg" alt="">
+                    </button>
+
+                    [wel-KIN-ee-uhn] /wɛlˈkɪniən/
+
+                    <audio id="pronunciationAudio" preload="auto">
+                        <source src="assets/welkinianPronunciation.mp3" type="audio/mpeg">
+                    </audio>
+                    
                 </p>
 
                 <p class="definition">
+                    <span class="nounLabel">noun</span>
                     A native, citizen, or inhabitant of the sky.
+                </p>
+                <p class="definition">
+                    <span class="nounLabel">adjective</span>
+                    Of or relating to the sky or its residents.
                 </p>
 
                 <p class="quote">
-                    “It is humanity's destiny to claim the sky as its own
+                    “It is humanity's destiny to become Welkinians claim the sky as its own
                     rather than remain a perpetual visitor”
                 </p>
 
             </div>
 
         </main>
+        
+        <script>
+            const pronunciationButton = document.getElementById("pronunciationButton");
+            const pronunciationImage = document.getElementById("pronunciationImage");
+            const pronunciationAudio = document.getElementById("pronunciationAudio");
+            pronunciationButton.addEventListener("click", function(){
+                pronunciationAudio.currentTime = 0;
+                pronunciationAudio.play();
+                pronunciationImage.src = "assets/volumeFull.svg";
+            });
+            pronunciationAudio.addEventListener("ended", function () {
+                pronunciationImage.src = "assets/volumeEmpty.svg";
+            });
+        </script>
+
 
     </body>
 

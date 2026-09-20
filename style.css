@@ -47,11 +47,24 @@ font-size: 25px;
 font-style: italic;
 margin-left: 15px;
 }
+
 .pronunciation {
-    font-size: 20px;
-    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+    margin-top: 0px;
     margin-bottom: 30px;
 }
+.pronunciationButton{
+    padding: 0px;
+    border: none;
+    background: transparent;
+    transform: translateY(4px) translateX(3px);
+}
+.pronunciationButton img{
+    height: 25px;
+    width: 25px;
+}
+
 .definition {
     font-size: 30px;
     line-height: 1.4;
