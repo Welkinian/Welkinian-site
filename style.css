@@ -43,7 +43,7 @@ nav a:hover{
     max-width: 1400px;
     margin: auto;
     padding: 0 50px 100px 50px;/*top right bottom left*/
-    transform: translateY(-10px)
+    transform: translateY(-50px)
 }
 .titleWord {
     font-size: 180px;
@@ -51,9 +51,9 @@ nav a:hover{
     margin: 0;
 }
 .nounLabel {
-font-size: 50px;
-font-style: italic;
-margin-left: 15px;
+    font-size: 50px;
+    font-style: italic;
+    margin-left: 15px;
 }
 .pronunciation {
     margin-left: 10px;
@@ -81,33 +81,51 @@ margin-left: 15px;
     font-style: italic;
     line-height: 1.5;
 }
-@media (max-width: 700px) {
-    nav{
-        gap: 18px;
-        font-size: 14px;
-    }
-
-    /*FOR HOME SCREEN*/
-    .home {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .titleWord {
-        font-size: 55px;
-    }
-
-    .definition {
-        font-size: 23px;
-    }
-
-    .quote {
-        font-size: 19px;
-    }
-}
 
 /*REFERING TO THE ABOUT PAGE*/
-
+.about{
+    display: flex;
+    flex-direction: row;
+    padding: 0 50px 100px 250px;
+}
+.aboutText{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+.questionHeading{
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    
+}
+.answerText{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0%;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.aboutPicBox{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+    align-items: center;
+    justify-content: center;
+}
+.profilePic{
+    height: 600px;
+    width: 600px;
+    
+}
+.aboutName{
+    padding: 0;
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+}
 
 /*REFERING TO THE PROJECTS PAGE*/
 
