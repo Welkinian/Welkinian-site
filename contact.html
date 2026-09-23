@@ -40,23 +40,9 @@
 
         </nav>
 
-        <main class="home">
+        <main class="contact">
 
         </main>
-        
-        <script>
-            const pronunciationButton = document.getElementById("pronunciationButton");
-            const pronunciationImage = document.getElementById("pronunciationImage");
-            const pronunciationAudio = document.getElementById("pronunciationAudio");
-            pronunciationButton.addEventListener("click", function(){
-                pronunciationAudio.currentTime = 0;
-                pronunciationAudio.play();
-                pronunciationImage.src = "assets/volumeFull.svg";
-            });
-            pronunciationAudio.addEventListener("ended", function () {
-                pronunciationImage.src = "assets/volumeEmpty.svg";
-            });
-        </script>
 
         <script src="cloudScript.js"></script>
 
